@@ -1,43 +1,36 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html",
-  "./src/**/*.{js,ts,jsx,tsx}",],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: 
-    {textStrokeWidth: {
-      '1': '1px',
-      '2': '2px',
-      '3': '3px',
-      // Add more as needed
-    },
-    textStrokeColor: {
-      'white': '#FFFFFF',
-      'black': '#000000',
-      // Add more as needed
+    extend: {
+      textStrokeWidth: {
+        1: "1px",
+        2: "2px",
+        3: "3px",
+      },
+      textStrokeColor: {
+        white: "#FFFFFF",
+        black: "#000000",
+      },
     },
   },
-},
-variants: {
-  extend: {
-    textStrokeWidth: ['hover', 'focus'],
-  },
-},
-plugins: [
-  function ({ addUtilities, theme }) {
-    const newUtilities = {
-      '.text-stroke': {
-        '-webkit-text-stroke-width': theme('textStrokeWidth.1'),
-        '-webkit-text-stroke-color': theme('textStrokeColor.black'),
-      },
-      '.text-stroke-2': {
-        '-webkit-text-stroke-width': theme('textStrokeWidth.2'),
-        '-webkit-text-stroke-color': theme('textStrokeColor.white'),
-      },
-      // Add more as needed
-    }
+  plugins: [
+    function ({ addUtilities, theme }) {
+      const textStrokeUtilities = Object.entries(theme("textStrokeWidth")).flatMap(([key, value]) => {
+        return Object.entries(theme("textStrokeColor")).map(([colorName, colorValue]) => ({
+          [`.text-stroke-${key}-${colorName}`]: {
+            "-webkit-text-stroke-width": value,
+            "-webkit-text-stroke-color": colorValue,
+          },
+        }));
+      });
 
-    addUtilities(newUtilities, ['responsive', 'hover']);
-  },
-],
-}
- 
+      const mergedUtilities = Object.assign({}, ...textStrokeUtilities);
+
+      addUtilities(mergedUtilities, ["responsive", "hover"]);
+    },
+  ],
+};

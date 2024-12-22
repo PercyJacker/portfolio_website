@@ -164,3 +164,23 @@
     transform: translateY(20px);
   }
 }
+
+.custom-flag-dropdown {
+  position: absolute !important;
+  left: 1rem !important; /* Move +91 to the left */
+  z-index: 10 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  border: none !important;
+  background: none !important;
+}
+
+.react-tel-input .form-control {
+  padding-left: 4rem !important; /* Ensure input text starts after +91 */
+  font-size: 35px !important;
+  border: none !important;
+  outline: none !important;
+  font-family: "Quick_Peachy" !important;
+}

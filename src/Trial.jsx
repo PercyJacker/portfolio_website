@@ -46,17 +46,9 @@ const Hero = () => {
     return () => unsubscribe();
   }, [scrollYProgress]);
 
-  // const scroll = new LocomotiveScroll();
   const smootherRef = useRef(null);
 
 
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollSmoother);
-  //   ScrollSmoother.create({
-  //     content: smootherRef.current,
-  //     smooth: 1, // Smoothness level (1 = smooth, 0 = no smoothing)
-  //   });
-  // }, []);
 
 
   const x =useTransform(scrollYProgress,[0,0.5],['0','-25%'])
@@ -91,32 +83,34 @@ const Hero = () => {
   };
   
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission behavior
 
     // Validate phone number before submitting
     if (!valid) {
-      alert('Please enter a valid 10-digit phone number.');
+      alert("Please enter a valid 10-digit phone number.");
       return;
     }
 
+    // Send form data with EmailJS
     emailjs
-    .sendForm('service_jmb09ry', 'template_13dwfrb', form.current, {
-      publicKey: 'p66jkoEcTjo8MqeFm',
-    })
-    .then(
-      (result) => {
-        console.log('Success:', result.text);
-        alert('Form submitted successfully!');
-      },
-      (error) => {
-        console.error('Error details:', error);
-        alert(`Form submission failed. Error: ${error.text}`);
-      }
-    );
-      }
-
+      .sendForm(
+        "service_jmb09ry", // Your EmailJS service ID
+        "template_13dwfrb", // Your EmailJS template ID
+        form.current, // Reference to the form
+        "p66jkoEcTjo8MqeFm" // Your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log("Success:", result.text);
+          alert("Form submitted successfully!");
+        },
+        (error) => {
+          console.error("Error details:", error);
+          alert(`Form submission failed. Error: ${error.text}`);
+        }
+      );
+  };
       const scrollToPosition = () => {
         window.scrollTo({
           top: window.innerHeight * 0.9297343616109683, // Scroll position as a percentage of the viewport height
