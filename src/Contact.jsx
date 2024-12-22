@@ -192,7 +192,7 @@ const Contact = () => {
         height: '100%',
         width: '100%',
         fontSize: '35px',
-        paddingLeft: '4rem', // Adjust padding to ensure proper spacing
+        paddingLeft: '3rem', // Adjust padding to ensure proper spacing
         padding: '8px',
         border: 'none',
         outline: 'none',
