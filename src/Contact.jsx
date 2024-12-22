@@ -174,7 +174,7 @@ const Contact = () => {
   </div>
 
   {/* Phone Input */}
-<<<<<<< HEAD
+
   <div className='container h-[10vh] w-[40vw] bg-[#F3F7EC] mt-2 ml-4 text-6xl rounded-lg font-["Quick_Peachy"] flex items-center'>
   <label className='label flex items-center w-full h-full bg-[#F3F7EC] rounded-lg'>
     <PhoneInput
