@@ -6,12 +6,12 @@ import insta from './assets/icons/instagram 2.png'
 import link from './assets/icons/Vector.png'
 
 import LocomotiveScroll from 'locomotive-scroll';
-import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2'
 import './style/style.css';
 import emailjs from '@emailjs/browser'
 import website from './assets/icons/domain.png'
 
+import "react-phone-input-2/lib/style.css";
 
 
 
