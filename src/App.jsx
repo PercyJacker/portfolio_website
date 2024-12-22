@@ -11,12 +11,13 @@ import Contact from './Contact'
 const App = () => {
   return (
 <>
-<Trial/>
 
-{/* <Hero/>  */}
+<Hero/> 
+<Trial/>
+<Contact/>
+
 {/* <About/> */}
 {/* <Web/> */}
-{/* <Contact/> */}
 
 </>
 

@@ -1,3 +1,8 @@
+/* src/index.css (or wherever Tailwind is configured) */
+@import './style/style.css';
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+

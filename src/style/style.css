@@ -1,0 +1,166 @@
+/* src/styles/custom.css */
+.custom-input {
+    height: 10vh;
+    width: 40vw;
+    font-size: 30px; /* Example: Large text */
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.react-tel-input .flag-dropdown {
+    margin-right: 1rem; /* Adjust the gap as needed */
+  }
+  
+  .react-tel-input .form-control {
+    padding-left: 1rem; /* Extra space for alignment */
+  }
+  
+  .react-tel-input .country-list {
+    width: 12rem !important; /* Increase dropdown width */
+  }
+  
+  /* Add this to your CSS or Tailwind configuration */
+.contact-btn {
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.1); /* Scales up the button */
+  background-color: #F7A72C; /* Changes background color on hover */
+}
+
+/* General Page Container */
+.page-container {
+  font-family: 'Quick_Peachy', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  height: 10vh;
+  width: 100%;
+  background-color: #005C78;
+  background-image: url('./assets/images/Blue.svg');
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 10vw;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.navbar-link {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 6vw;
+  cursor: pointer;
+}
+
+.navbar-button {
+  background-color: #E88D67;
+  color: white;
+  padding: 1vh 2vw;
+  border-radius: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hover and Tap Animations */
+.navbar-link:hover,
+.navbar-button:hover {
+  transform: scale(1.1);
+  background-color: #F7A72C;
+}
+
+.navbar-link:active,
+.navbar-button:active {
+  transform: scale(0.9);
+}
+
+/* Contact Info */
+.contact-info {
+  position: absolute;
+  top: 50vh;
+  left: 67vw;
+  z-index: 10;
+  background-color: #005C78;
+  color: #E88D67;
+  padding: 1vh 3vw;
+}
+
+.contact-info h1 {
+  font-size: 2.5vh;
+  margin: 0.5vh 0;
+}
+
+/* Animated Text */
+.animated-text {
+  position: absolute;
+  top: 15vh;
+  left: 10vw;
+  font-size: 21vh;
+  color: #E88D67;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Main Image */
+.main-image {
+  position: absolute;
+  top: 25vh;
+  left: 10vw;
+  height: 65vh;
+  width: 40vw;
+  z-index: 10;
+}
+
+/* Scrollable Content */
+.scroll-content {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+}
+
+.scroll-text {
+  position: absolute;
+  font-size: 21vh;
+  color: #F3F7EC;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+  position: absolute;
+  top: 85vh;
+  left: 47vw;
+  height: 10vh;
+  width: 10vh;
+  animation: bounce 7s ease-in-out infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
