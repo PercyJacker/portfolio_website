@@ -30,7 +30,9 @@ import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2'
 import './style/style.css';
 import emailjs from '@emailjs/browser'
-import website from './assets/icons/domain.png'
+import website from './assets/icons/image 3.png'
+import model from './assets/icons/image 2.png'
+import youtube from './assets/icons/image 4.png'
 
 
 
@@ -368,7 +370,7 @@ const Hero = () => {
     className="h-[6vh] mt-6 w-[8vw] bg-[#E88D67] rounded-2xl flex items-center justify-center cursor-pointer"
   >
     <h1 className="text-lg text-white font-['Radley']">
-      Click here
+    Soon..
     </h1>
   </motion.div>
 </motion.div>
@@ -380,7 +382,7 @@ const Hero = () => {
 >
   <img
     className="h-[15vh] w-[10vw] mb-4 object-contain"
-    src={website}
+    src={youtube}
     alt="Website Preview"
   />
 
@@ -394,7 +396,7 @@ const Hero = () => {
     className="h-[6vh] w-[8vw] bg-black mt-4 rounded-2xl flex items-center justify-center cursor-pointer shadow-md"
   >
     <h1 className="text-lg text-white font-['Radley']">
-      Click here
+      Soon..
     </h1>
   </motion.div>
 </motion.div>
@@ -406,7 +408,7 @@ const Hero = () => {
 >
   <img
     className="h-[15vh]  w-auto mt-[-13vh] object-contain"
-    src={website}
+    src={model}
     alt="Video Preview"
   />
 
@@ -420,7 +422,7 @@ const Hero = () => {
     className="h-[6vh] w-[20vw] md:w-[8vw] mt-5 bg-[#E88D67] rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300"
   >
     <h1 className="text-lg text-white font-['Radley']">
-      Click here
+    Soon..
     </h1>
   </motion.div>
 </motion.div>

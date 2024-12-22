@@ -165,7 +165,7 @@ const Contact = () => {
   {/* Email Input */}
   <div className='h-[10vh] w-[40vw] bg-[#F3F7EC] mt-[1vh] rounded-lg ml-[1vw]'>
     <input
-      className='h-[10vh] w-[40vw] bg-[#F3F7EC] text-4xl rounded-lg font-["Radley"]'
+      className='h-[10vh] w-[40vw] bg-[#F3F7EC] text-3xl rounded-lg font-["Radley"]'
       type='email'
       name='user_email'
       placeholder='Email...'
@@ -174,32 +174,47 @@ const Contact = () => {
   </div>
 
   {/* Phone Input */}
-  <div className='container h-[10vh] w-[40vw] bg-[#F3F7EC] mt-2 ml-4 text-6xl rounded-lg font-["Quick_Peachy"]'>
-    <label className='label h-[10vh] w-[40vw] flex items-center justify-center bg-[#F3F7EC] rounded-lg'>
-      <PhoneInput
-        country={'in'}
-        value={PhoneNumber}
-        onChange={handleChange}
-        inputProps={{ required: true }}
-        separateDialCode={true}
-        buttonClass='custom-flag-dropdown'
-        dropdownStyle={{
-          width: '12rem',
-          fontSize: '0.75rem',
-        }}
-        inputStyle={{
-          height: '100%',
-          width: 'calc(100% - 4rem)',
-          fontSize: '35px',
-          paddingLeft: '3rem',
-          padding: '8px',
-          border: 'none',
-          outline: 'none',
-          fontFamily: 'Quick_Peachy',
-        }}
-      />
-    </label>
-  </div>
+  <div className='container h-[10vh] w-[40vw] bg-[#F3F7EC] mt-2 ml-4 text-6xl rounded-lg font-["Quick_Peachy"] flex items-center'>
+  <label className='label flex items-center w-full h-full bg-[#F3F7EC] rounded-lg'>
+    <PhoneInput
+      country={'in'}
+      value={PhoneNumber}
+      onChange={handleChange}
+      inputProps={{ required: true }}
+      separateDialCode={true}
+      buttonClass='custom-flag-dropdown'
+      dropdownStyle={{
+        width: '12rem',
+        fontSize: '0.75rem',
+      }}
+      inputStyle={{
+        height: '100%',
+        width: '100%',
+        fontSize: '35px',
+        paddingLeft: '4rem', // Adjust padding to ensure proper spacing
+        padding: '8px',
+        border: 'none',
+        outline: 'none',
+        fontFamily: 'Quick_Peachy',
+      }}
+      containerStyle={{
+        display: 'flex',
+        alignItems: 'center',
+      }}
+      buttonStyle={{
+        position: 'absolute',
+        left: '1rem', // Move the dial code left
+        zIndex: 10,
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        border: 'none',
+        background: 'none',
+      }}
+    />
+  </label>
+</div>
 
   {/* Message Input */}
   <div className='h-[20vh] w-[40vw] bg-[#F3F7EC] mt-[1vh] rounded-lg ml-[1vw] overflow-hidden'>
