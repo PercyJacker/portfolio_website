@@ -191,7 +191,7 @@ const Contact = () => {
           height: '100%',
           width: 'calc(100% - 4rem)',
           fontSize: '35px',
-          paddingLeft: '3rem',
+          paddingLeft: '4rem',
           padding: '8px',
           border: 'none',
           outline: 'none',
