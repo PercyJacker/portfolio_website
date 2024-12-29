@@ -165,7 +165,7 @@ const Hero = () => {
   </h1>
   <img className="h-[5vh] absolute top-[200px] left-[50px]" src={email} alt="Email Icon" />
   <h1 className="text-[20px] text-white mt-[30px] ml-[95px] font-['Quick_Peachy']">
-    Percyjacker2002@gmail.com
+  designelementor@proton.me
   </h1>
   <img className="h-[3vh] absolute top-[260px] left-[60px]" src={whatsapp} alt="Email Icon" />
 
