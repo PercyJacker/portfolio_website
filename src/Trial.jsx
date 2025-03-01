@@ -21,6 +21,8 @@ import art from './assets/icons/art.png'
 import puru from './assets/images/Subject.png'
 import whatsapp from './assets/images/whatsapp-white-icon.png'
 import email from './assets/images/Subject 2.png'
+import cv from './assets/images/resume.pdf';
+
 
 
 
@@ -133,15 +135,21 @@ const Hero = () => {
     <>
     {/* page1 */}
    
-    <div className='h-screen  w-full bg-[#F3F7EC] bg-[url("./assets/icons/nnnoise.svg")] '>
+    <div  id="about" className='h-screen  w-full bg-[#F3F7EC] bg-[url("./assets/icons/nnnoise.svg")] '>
     <div className='h-[4vh]  w-full bg-black'></div>
 
-        <div className='h-[35vh] w-full bg-[#F3F7EC] top-[20vh] relative z-10 leading-none bg-[url("./assets/icons/nnnoise.svg")] '>
+        <div  id="about"  className='h-[35vh] w-full bg-[#F3F7EC] top-[20vh] relative z-10 leading-none bg-[url("./assets/icons/nnnoise.svg")] '>
         <h1 className='text-[11vh] text-black ml-[10vw]  font-["Quick_Peachy"] '>Hello,<br /> I'm Percy</h1>
-            <div  className=' h-[53vh] w-full bg-[#F3F7EC] top-[5vh]  relative z-10 leading-tight bg-[url("./assets/icons/nnnoise.svg")] '>
+            <div id="about" className=' h-[53vh] w-full bg-[#F3F7EC] top-[5vh]  relative z-10 leading-tight bg-[url("./assets/icons/nnnoise.svg")] '>
                 <h1 className='text-[4vh] text-black  font-["Radley"] ml-[10vw]'>I create my client's <i>ideas into frames</i> <br /> with  my  <b>web</b> development , <b>video</b> <br />  editing and  <b>3D</b> modeling skills.</h1>
-                    <h1 className='text-[16vh] text-[#005C78] mt-[24vh] ml-[10vw]  font-["Quick_Peachy"] '>ABOUT ME</h1>
+                <a href={cv} download>
+    <button className="bg-black text-white px-6 py-3 ml-[10vw] mt-4 text-[3vh] font-['Radley'] rounded-lg hover:bg-gray-800 transition-all duration-300">
+        Download CV
+    </button>
+</a>
 
+                    <h1 className='text-[16vh] text-[#005C78] mt-[16vh] ml-[10vw]  font-["Quick_Peachy"] '>ABOUT ME</h1>
+                   
             </div>
 
         </div>
@@ -149,23 +157,23 @@ const Hero = () => {
         style={{y:parallaxY}}
         className='h-[80vh] w-[30vw] bg-[#005C78] top-[10vh] ml-[60vw] relative z-10'>
 <img 
-  className="absolute mt-[-3.5vh] ml-5 object-contain" 
+  className="absolute mt-[1.5vh] ml-5 object-contain" 
   style={{ width: '400px', height: '600px' }} 
   src={puru} 
   alt="Your Image Description"
 />            <div className='h-[8vh] w-[11vw] bg-[#E88D67] absolute top-[18vh] ml-[-5vw] rounded-lg'></div>
             <div className='h-[8vh] w-[11vw] bg-[#E88D67]  absolute top-[-3vh] ml-[20vw] rounded-lg'></div>
 
-            <div className="h-[53vh] w-full bg-black absolute top-[60vh]">
-  <h1 className="text-[60px] text-white mt-[30px] ml-[50px] font-['Quick_Peachy']">
-    PERSONAL
+            <div className="h-[45vh] w-full bg-black absolute top-[60vh]">
+  <h1 className="text-[40px] text-white mt-[30px] ml-[85px] font-['Quick_Peachy']">
+    PERSONAL INFO
   </h1>
-  <h1 className="text-[25px] text-white mt-[20px] ml-[50px] font-['Quick_Peachy']">
+  <h1 className="text-[25px] text-white mt-[5.5vh] ml-[50px] font-['Quick_Peachy']">
     Name: Purushottam Murmu
   </h1>
   <img className="h-[5vh] absolute top-[200px] left-[50px]" src={email} alt="Email Icon" />
   <h1 className="text-[20px] text-white mt-[30px] ml-[95px] font-['Quick_Peachy']">
-  designelementor@proton.me
+  Purushottam@designelement.shop
   </h1>
   <img className="h-[3vh] absolute top-[260px] left-[60px]" src={whatsapp} alt="Email Icon" />
 
@@ -385,14 +393,21 @@ const Hero = () => {
   </div>
 
   <motion.div
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.95 }}
-    className="h-[6vh] w-[8vw] bg-black mt-4 rounded-2xl flex items-center justify-center cursor-pointer shadow-md"
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+  className="h-[6vh] w-[8vw] bg-black mt-4 rounded-2xl flex items-center justify-center cursor-pointer shadow-md"
+>
+  <a 
+    href="https://ytjobs.co/talent/profile/167383?r=730&t=tnp&utm_campaign=share-new-profile&utm_ref=talent&utm_source=copylink" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="w-full h-full flex items-center justify-center"
   >
     <h1 className="text-lg text-white font-['Radley']">
       Soon..
     </h1>
-  </motion.div>
+  </a>
+</motion.div>
 </motion.div>
 
 <motion.div

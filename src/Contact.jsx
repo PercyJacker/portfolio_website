@@ -159,10 +159,16 @@ const Contact = () => {
           <div className='h-[10vh] w-[30vh] mt-2 bg-black'>
             <h1 className='text-[3vh] font-["Radley"] text-white'>Other links are :</h1>
             <div className='flex space-x-4'>
-              <img src={discord} alt='' />
-              <img src={insta} alt='' />
-              <img src={link} alt='' />
-            </div>
+  <a href="https://discordapp.com/users/692750614379233371" target="_blank" rel="noopener noreferrer">
+    <img src={discord} alt="Discord Profile" />
+  </a>
+  <a href="https://www.instagram.com/ani_nation24/" target="_blank" rel="noopener noreferrer">
+    <img src={insta} alt="Instagram Profile" />
+  </a>
+  <a href="https://www.linkedin.com/in/61b9a0221/" target="_blank" rel="noopener noreferrer">
+    <img src={link} alt="LinkedIn Profile" />
+  </a>
+</div>
           </div>
         </motion.div>
         <form ref={form} onSubmit={handleSubmit} className='h-[80vh] w-[40vw] bg-black mt-[10vh] absolute ml-[55vw]'>

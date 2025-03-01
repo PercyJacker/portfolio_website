@@ -53,19 +53,20 @@ const Hero = () => {
   <div className="h-screen w-full bg-[#005C78] relative text-[#005C78] leading-[20vh] overflow-x-hidden bg-[url('./assets/images/Blue.svg')]">
     <nav className="h-[10vh] w-full bg-[#005C78] absolute top-0 bg-[url('./assets/images/Blue.svg')]">
       <div className="mt-[7vh] h-[8vh] relative top-0 flex flex-wrap items-center justify-between px-4">
-        <img className="h-10 w-10" src={star} alt="Star icon" />
-        <h1 className="text-2xl sm:text-4xl text-white font-['Quick_Peachy']">Percy Jacker</h1>
+        <img className="h-10 w-10 ml-[11vw]" src={star} alt="Star icon" />
+        <h1 className="text-2xl sm:text-4xl text-white ml-[-65vw] font-['Quick_Peachy']">Percy Jacker</h1>
         <div className="flex gap-4">
           <button
-            onClick={scrolltoAbout}
-            className="h-[5vh] sm:w-[15vh] w-[40vw] text-2xl text-white font-['Quick_Peachy'] rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#d3775b] transition duration-300"
+            onClick={
+              scrolltoAbout}
+            className="h-[5vh] sm:w-[15vh] w-[40vw] z-10 ml-[-40vw] text-2xl text-white font-['Quick_Peachy'] rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#d3775b] transition duration-300"
           >
             About Me
           </button>
 
           <button
             onClick={scrolltoWork}
-            className="h-[5vh] sm:w-[13vh] w-[40vw] text-2xl text-white font-['Quick_Peachy'] rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#d3775b] transition duration-300"
+            className="h-[5vh] sm:w-[13vh] w-[40vw] z-10 text-2xl text-white font-['Quick_Peachy'] rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#d3775b] transition duration-300"
           >
             Work
           </button>
@@ -86,7 +87,7 @@ const Hero = () => {
       PORTFOLIO PORTFOLIO
     </motion.h1>
     <img
-  className="absolute top-[25vh] left-1/2 transform -translate-x-1/2 h-[65vh] w-[40vw] sm:h-[65vh] sm:w-[40vw] z-10"
+  className="absolute top-[25vh] left-1/3 transform -translate-x-1/2 h-[65vh] w-[40vw] sm:h-[65vh] sm:w-[40vw] z-10"
   src={img1}
   alt="Example image"
 />
@@ -129,7 +130,7 @@ const Hero = () => {
     {/* Button to scroll down */}
     <button
       onClick={scrollDown}
-      className="h-[5vh] w-[15vh] sm:w-[15vh] w-[40vw] text-2xl text-white absolute z-10 top-[7vh] font-['Quick_Peachy'] ml-[77vw] sm:ml-[80vw] bg-[#E88D67] rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#d3775b] transition duration-300"
+      className="h-[5vh]  sm:w-[15vh] w-[40vw] text-2xl text-white absolute z-10 top-[8.5vh] font-['Quick_Peachy'] ml-[77vw] sm:ml-[80vw] bg-[#E88D67] rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#d3775b] transition duration-300"
     >
       Contact us
     </button>
