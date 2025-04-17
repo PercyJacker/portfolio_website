@@ -7,6 +7,9 @@ import About from './About'
 import Web from './Web'
 import Trial from './Trial'
 import Contact from './Contact'
+import Work from './Work'
+// import Trail2 from './Trails'
+// import Trails from './Trails'
 
 const App = () => {
   return (
@@ -14,6 +17,9 @@ const App = () => {
 
 <Hero/> 
 <Trial/>
+{/* <Trail2/> */}
+{/* <Trails/> */}
+<Work/>
 <Contact/>
 
 {/* <About/> */}
