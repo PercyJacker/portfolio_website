@@ -10,6 +10,10 @@ Currently, it includes:
 - A contact form with styled input fields
 - Deployed live at [designelement.shop](https://www.designelement.shop/)
 
+
+Let me know when you want one for your **job website** or **AWS infra project** — I’ll make them just as clean 🔥
+
+
 ## 🚀 Getting Started in your local machine
 
 To run this project locally, follow these steps:
@@ -20,6 +24,4 @@ cd your-portfolio
 npm install
 npm run dev
 
----
 
-Let me know when you want one for your **job website** or **AWS infra project** — I’ll make them just as clean 🔥
