@@ -20,7 +20,7 @@ To run this project locally, follow these steps:
 
 ```bash
 git clone https://github.com/PercyJacker/portfolio_website.git
-cd your-portfolio
+cd portfolio_website
 npm install
 npm run dev
 
