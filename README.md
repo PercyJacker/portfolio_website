@@ -19,7 +19,7 @@ Let me know when you want one for your **job website** or **AWS infra project** 
 To run this project locally, follow these steps:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/PercyJacker/portfolio_website.git
 cd your-portfolio
 npm install
 npm run dev
