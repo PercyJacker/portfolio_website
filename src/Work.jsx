@@ -135,7 +135,7 @@ const Work = () => {
     rel="noopener noreferrer"
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
-    className="bg-black text-white px-6 py-2 font-['Radley'] rounded-full w-full text-center block text-lg"
+    className="bg-[#005C78]  text-white px-6 py-2 font-['Radley'] rounded-full w-full text-center block text-lg"
   >
     Click here
   </motion.a>
