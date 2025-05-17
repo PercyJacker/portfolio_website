@@ -480,7 +480,7 @@ const Hero = () => {
     <motion.div
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="h-[6vh] w-[8vw] bg-black mt-4 rounded-2xl flex items-center justify-center cursor-pointer shadow-md"
+      className="bg-[#005C78]  h-[6vh] w-[8vw] bg-black mt-4 rounded-2xl flex items-center justify-center cursor-pointer shadow-md"
     >
       <h1 className="text-lg text-white font-['Radley']">Click here</h1>
     </motion.div>
