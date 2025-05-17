@@ -30,6 +30,14 @@ const Hero = () => {
   const cards = useTransform(scrollYProgress, [0.48, 0.57], ['0%', '-20%']); 
   const review = useTransform(scrollYProgress, [0.58, 0.75], ['0%', '-100%']); 
 
+
+  // Assuming locomotive scroll is initialized
+// window.LocomotiveScroll?.scrollTo('#contact', {
+//   offset: 0,
+//   duration: 1000,
+//   easing: [0.25, 0.0, 0.35, 1.0],
+// });
+
   // Scroll down function
   const scrollDown = () => {
     const contactSection = document.getElementById('contact-section');
@@ -182,19 +190,23 @@ const Hero = () => {
 
 {/* Orange circle with black phone call logo */}
 <div
-  className="flex sm:hidden h-[5vh] w-[5vh] absolute z-10 top-[8.5vh] ml-[85vw] sm:ml-[80vw] rounded-full bg-[#d3775b]  items-center justify-center cursor-pointer shadow-lg transition duration-300"
-><div
-  onClick={() => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  }}
-  className="cursor-pointer"
+  className="flex sm:hidden h-[5vh] w-[5vh] absolute z-50 top-[8.5vh] ml-[85vw] sm:ml-[80vw] rounded-full bg-[#d3775b] items-center justify-center cursor-pointer shadow-lg transition duration-300"
 >
-  <img src={phone2} alt="Call Icon" className="w-[2.5vh] h-[2.5vh]" />
-</div>
+  <button
+    onClick={() => {
+      console.log("Contact button clicked ✅");
 
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      } else {
+        console.log("⚠️ 'contact' section not found!");
+      }
+    }}
+    className="cursor-pointer bg-transparent border-none p-0"
+  >
+    <img src={phone2} alt="Call Icon" className="w-[2.5vh] h-[2.5vh]" />
+  </button>
 </div>
 
 

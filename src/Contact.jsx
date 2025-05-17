@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <div>
-      <div id='contact' className="hidden md:block w-full min-h-screen bg-black text-white px-20 py-16">
+      <div id="contact" className="hidden md:block w-full min-h-screen bg-black text-white px-20 py-16">
         <h1 className="text-9xl font-['Quick_Peachy'] text-[#E88D67] text-center mb-8 mt-[-8vh] z-20">CONTACT US</h1>
         <div className="flex justify-between">
           <div className="w-1/2 pr-12">
@@ -116,7 +116,7 @@ const Contact = () => {
           <h1 className="text-6xl font-['Quick_Peachy'] text-[#E88D67] pt-0 pb-4 text-center relative mt-[-23vh] z-10">CONTACT US</h1>
 
           {/* Get in touch subheading */}
-          <div className="text-3xl font-['Quick_Peachy'] mb-[-2] text-center">
+          <div   className="text-3xl font-['Quick_Peachy'] mb-[-2] text-center">
             <span className="text-[#E88D67]">Get in touch</span> <span className="text-white">with us -</span>
           </div>
 
@@ -134,7 +134,7 @@ const Contact = () => {
             </div>
 
             {/* Phone Input */}
-            <div className="bg-[#F3F7EC] rounded-xl overflow-hidden">
+            <div id="contact"   className="bg-[#F3F7EC] rounded-xl overflow-hidden">
               <PhoneInput
                 country={"in"}
                 value={PhoneNumber}
