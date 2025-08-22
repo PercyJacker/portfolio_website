@@ -19,6 +19,10 @@ import emailjs from "@emailjs/browser"
 import website from "./assets/icons/image 3.png"
 import model from "./assets/icons/image 2.png"
 import youtube from "./assets/icons/image 4.png"
+import oracle from "./assets/images/oracle.png"
+import aws from "./assets/images/aws.png"
+import hackathon from "./assets/images/hackathon.png"
+import nullclass from "./assets/images/nullclass.png"
 
 const Hero = () => {
   const ref = useRef()
@@ -224,25 +228,32 @@ const Hero = () => {
           </div>
           <div className="h-[50vh] w-[5vh] absolute mt-[25vh] ml-[6vw] ">
             <img className="h-[4vh] w-[4vw] mt-[1vh]" src={star || "/placeholder.svg"} alt="" />
-            <img className="h-[4vh] w-[4vw] mt-[15vh]" src={star || "/placeholder.svg"} alt="" />
-            <img className="h-[4vh] w-[4vw] mt-[8vh]" src={star || "/placeholder.svg"} alt="" />
+            <img className="h-[4vh] w-[4vw] mt-[25.5vh]" src={star || "/placeholder.svg"} alt="" />
+            {/* <img className="h-[4vh] w-[4vw] mt-[8vh]" src={star || "/placeholder.svg"} alt="" /> */}
           </div>
           <div className="h-[50vh] w-[65vh] absolute mt-[25vh] ml-[10vw] ">
-            <h1 className='text-[3vh] text-[#F3F7EC] mt-[2vh] font-["Quick_Peachy"] '>Web development</h1>
-            <h1 className='text-[2.5vh] text-[#F3F7EC] mt-[1vh] font-["Radley"]'>
-              Worked on developing and maintaining web applications using React, Tailwind CSS, Node.js, and MongoDB.
+            <h1 className='text-[3vh] text-[#F3F7EC] mt-[2vh] font-["Quick_Peachy"] '>Nullclass - Web development</h1>
+            <h1 className='text-[2.5vh] text-[#F3F7EC] mt-[1vh] font-["Radley"] italic'>
+              1 Jan - 31 Jan 
             </h1>
-            <h1 className='text-[2.5vh] text-[#F3F7EC] mt-[1vh] font-["Radley"]'>
-              Built an Internshala clone with front-end completed and back-end in progress.
+            <h1 className='text-[2.5vh] text-[#F3F7EC] mt-[1vh] font-["Radley"]  tracking-normal leading-7 '>
+            - Developed a job portal website using the MERN stack that incorporated features
+like Google Maps for location tracking, a payment gateway for job listings, and
+certificate generation for completed courses.
             </h1>
-            <h1 className='text-[3vh] text-[#F3F7EC] mt-[3vh] font-["Quick_Peachy"] '>video editing</h1>
-            <h1 className='text-[2.5vh] text-[#F3F7EC] mt-[1vh] font-["Radley"]'>
-              Edited videos using DaVinci Resolve, focusing on color grading, transitions, and storytelling.
+            <h1 className='text-[2.5vh] text-[#F3F7EC] mt-[1vh] font-["Radley"]  tracking-normal leading-7 '>
+            - Implemented user-friendly design and ensured secure transactions and smooth
+            payment processing.
             </h1>
-            <h1 className='text-[3vh] text-[#F3F7EC] mt-[3vh] font-["Quick_Peachy"] '>3-D modeling</h1>
-            <h1 className='text-[2.5vh] text-[#F3F7EC] mt-[1vh] font-["Radley"]'>
-              Created 3D models in Blender, learning basic modeling, texturing, and rendering techniques.
+            <h1 className='text-[3vh] text-[#F3F7EC] mt-[3vh] font-["Quick_Peachy"] '> AWS – Cloud Infrastructure Consultant</h1>
+            <h1 className='text-[2.5vh] text-[#F3F7EC] mt-[1vh] font-["Radley"] italic'>
+            1 Mar - 30 Mar 
             </h1>
+            <h1 className='text-[2.5vh] text-[#F3F7EC] mt-[1vh] font-["Radley"]  tracking-normal leading-7 '>
+- Advised
+3+ teams on infrastructure upgrades, improving load times by 40% and
+reducing downtime by 25% through scalable server and pipeline solutions.
+      </h1>
           </div>
           <div className="h-[50vh] w-[55vh] absolute mt-[55vh] ml-[60vw] "></div>
           <motion.div
@@ -251,20 +262,18 @@ const Hero = () => {
             className="h-[60vh] w-[75vh] bg-[#E88D67] absolute z-10 mt-[85vh] ml-[10vw] "
           >
             <motion.h1
-              ref={ref}
-              style={{}}
-              className='text-[10vh] ml-4 text-black mt-[5vh] font-["Quick_Peachy"] absolute'
+              className='text-[8vh] text-black mt-[5vh] font-["Quick_Peachy"] text-center'
             >
               Technical skills:
-              <div className="h-[20vh] w-[23vw] ml-5">
+              <div className="h-[20vh] w-[23vw] ml-1 mt-7">
                 <h1 className='text-[4vh] mt-[2vh] font-["Quick_Peachy"] '>Software skills</h1>
-                <div className="flex ">
+                <div className="flex ml-[4vw] ">
                   <img className="h-[5vh] mt-5" src={vscode || "/placeholder.svg"} alt="" />
                   <img className="h-[5vh] mt-5 ml-3" src={blender || "/placeholder.svg"} alt="" />
                   <img className="h-[5vh] ml-4 mt-5" src={DaVinci || "/placeholder.svg"} alt="" />
                 </div>
               </div>
-              <div className="h-[20vh] w-[23vw] absolute ml-[20vw] mt-[-22vh] p-4">
+              <div className="h-[20vh] w-[23vw] absolute ml-[25vw] mt-[-22vh] p-4">
                 <h1 className="text-[4vh] font-['Quick_Peachy'] mb-2">Coding Skills</h1>
                 <div className="flex flex-wrap">
                   <div className="w-1/2">
@@ -282,23 +291,75 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-[11vw] w-[60vh] mt-5 p-4">
-                <div className="flex flex-wrap gap-4">
-                  <div className="h-[7vh] w-[15vw] bg-black rounded-full flex items-center justify-center">
-                    <h1 className="text-2xl text-white font-['Radley']">#communicaton</h1>
-                  </div>
-                  <div className="h-[7vh] w-[10vw] bg-black rounded-full flex items-center justify-center">
-                    <h1 className="text-2xl text-white font-['Radley']">#creativity</h1>
-                  </div>
+              <div className="h-[11vw] w-[60vh] mt-[-2vh] p-1">
+                <h1 className='text-[4vh] mb-5 ml-[-16vw] font-["Quick_Peachy"]'>Certifications</h1>
+
+                <div className="flex flex-wrap ml-[3vw] gap-4 mt-2">
+                  <button 
+                    onClick={() => {
+                      const popup = document.createElement('div');
+                      popup.className = 'fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50';
+                      popup.onclick = () => popup.remove();
+                      const img = document.createElement('img');
+                      img.src = nullclass;
+                      img.className = 'max-h-[90vh] max-w-[90vw] object-contain';
+                      popup.appendChild(img);
+                      document.body.appendChild(popup);
+                    }}
+                    className="h-[6vh] w-[10vw] border-2 border-black rounded-full flex items-center justify-center hover:bg-black group transition-all duration-300 px-6"
+                  >
+                    <h1 className="text-xl text-black font-['Radley'] group-hover:text-white transition-all duration-300 whitespace-nowrap">Nullclass</h1>
+                  </button>
+                  
+                  <button
+                    onClick={() => {
+                      const popup = document.createElement('div');
+                      popup.className = 'fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50';
+                      popup.onclick = () => popup.remove();
+                      const img = document.createElement('img');
+                      img.src = aws;
+                      img.className = 'max-h-[90vh] max-w-[90vw] object-contain';
+                      popup.appendChild(img);
+                      document.body.appendChild(popup);
+                    }}
+                    className="h-[6vh] w-[9vw] border-2 border-black rounded-full flex items-center justify-center hover:bg-black group transition-all duration-300 px-4"
+                  >
+                    <h1 className="text-xl text-black font-['Radley'] group-hover:text-white transition-all duration-300 whitespace-nowrap">AWS</h1>
+                  </button>
                 </div>
 
-                <div className="flex gap-4 mt-4">
-                  <div className="h-[7vh] w-[10vw] bg-black rounded-full flex items-center justify-center">
-                    <h1 className="text-2xl text-white font-['Radley']">#english</h1>
-                  </div>
-                  <div className="h-[7vh] w-[13vw] bg-black rounded-full flex items-center justify-center">
-                    <h1 className="text-2xl text-white font-['Radley']">#adaptability</h1>
-                  </div>
+                <div className="flex flex-wrap ml-[3vw] mt-4 gap-4">
+                  <button
+                    onClick={() => {
+                      const popup = document.createElement('div');
+                      popup.className = 'fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50';
+                      popup.onclick = () => popup.remove();
+                      const img = document.createElement('img');
+                      img.src = oracle;
+                      img.className = 'max-h-[90vh] max-w-[90vw] object-contain';
+                      popup.appendChild(img);
+                      document.body.appendChild(popup);
+                    }}
+                    className="h-[6vh] w-[8vw] border-2 border-black rounded-full flex items-center justify-center hover:bg-black group transition-all duration-300 px-4"
+                  >
+                    <h1 className="text-xl text-black font-['Radley'] group-hover:text-white transition-all duration-300 whitespace-nowrap">Oracle</h1>
+                  </button>
+                  
+                  <button
+                    onClick={() => {
+                      const popup = document.createElement('div');
+                      popup.className = 'fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50';
+                      popup.onclick = () => popup.remove();
+                      const img = document.createElement('img');
+                      img.src = hackathon;
+                      img.className = 'max-h-[90vh] max-w-[90vw] object-contain';
+                      popup.appendChild(img);
+                      document.body.appendChild(popup);
+                    }}
+                    className="h-[6vh] w-[11vw] border-2 border-black rounded-full flex items-center justify-center hover:bg-black group transition-all duration-300 px-5"
+                  >
+                    <h1 className="text-xl text-black font-['Radley'] group-hover:text-white transition-all duration-300 whitespace-nowrap">Hackathon</h1>
+                  </button>
                 </div>
               </div>
             </motion.h1>
@@ -351,45 +412,42 @@ const Hero = () => {
         {/* Mobile version - hidden on desktop */}
 <div  className="md:hidden w-full bg-[#005C78] overflow-hidden mt-[-55px]">
             <div id="work" className="px-6 py-12">
-            <h2 className="text-5xl font-['Quick_Peachy'] text-black mb-8">Experience-</h2>
+            <h2 className='text-[8vh] text-black font-["Quick_Peachy"] mb-8'>Experience:</h2>
 
             <div className="space-y-8">
               <div className="flex">
                 <div className="mr-4 mt-1">
-                  <img src={star || "/placeholder.svg"} alt="Star" className="w-6 h-6" />
+                  <img src={star || "/placeholder.svg"} alt="Star" className="h-[4vh] w-[4vw]" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-['Quick_Peachy'] text-white mb-2">Web development</h3>
-                  <p className="text-lg font-['Radley'] text-white">
-                    Worked on developing and maintaining web applications using React, Tailwind CSS, Node.js, and
-                    MongoDB.
+                  <h3 className='text-[3vh] text-[#F3F7EC] font-["Quick_Peachy"] mb-2'>Nullclass - Web development</h3>
+                  <p className='text-[2.5vh] text-[#F3F7EC] font-["Radley"] italic'>
+                    1 Jan - 31 Jan
                   </p>
-                  <p className="text-lg font-['Radley'] text-white mt-2">
-                    Built an Internshala clone with front-end completed and back-end in progress.
+                  <p className='text-[2vh] text-[#F3F7EC] mt-[1vh] font-["Radley"] tracking-normal leading-6'>
+                    - Developed a job portal website using the MERN stack that incorporated features
+                    like Google Maps for location tracking, a payment gateway for job listings, and
+                    certificate generation for completed courses.
                   </p>
-                </div>
-              </div>
-
-              <div className="flex">
-                <div className="mr-4 mt-1">
-                  <img src={star || "/placeholder.svg"} alt="Star" className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-['Quick_Peachy'] text-white mb-2">video editing</h3>
-                  <p className="text-lg font-['Radley'] text-white">
-                    Edited videos using DaVinci Resolve, focusing on color grading, transitions, and storytelling.
+                  <p className='text-[2vh] text-[#F3F7EC] mt-[1vh] font-["Radley"] tracking-normal leading-6'>
+                    - Implemented user-friendly design and ensured secure transactions and smooth
+                    payment processing.
                   </p>
                 </div>
               </div>
 
               <div className="flex">
                 <div className="mr-4 mt-1">
-                  <img src={star || "/placeholder.svg"} alt="Star" className="w-6 h-6" />
+                  <img src={star || "/placeholder.svg"} alt="Star" className="h-[4vh] w-[4vw]" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-['Quick_Peachy'] text-white mb-2">3-D modeling</h3>
-                  <p className="text-lg font-['Radley'] text-white">
-                    Created 3D models in Blender, learning basic modeling, texturing, and rendering techniques.
+                  <h3 className='text-[3vh] text-[#F3F7EC] font-["Quick_Peachy"] mb-2'>AWS – Cloud Infrastructure Consultant</h3>
+                  <p className='text-[2.5vh] text-[#F3F7EC] font-["Radley"] italic'>
+                    1 Mar - 30 Mar
+                  </p>
+                  <p className='text-[2vh] text-[#F3F7EC] mt-[1vh] font-["Radley"] tracking-normal leading-6'>
+                    - Advised 3+ teams on infrastructure upgrades, improving load times by 40% and
+                    reducing downtime by 25% through scalable server and pipeline solutions.
                   </p>
                 </div>
               </div>
@@ -450,13 +508,19 @@ const Hero = () => {
   >
     <img className="h-[15vh] w-[10vw] mb-4" src={website || "/placeholder.svg"} alt="Website Preview" />
     <div className="text-4xl text-white font-['Radley'] mb-4 text-center">Want to build your dream website?</div>
-    <motion.div
+    <a href="https://github.com/PercyJacker">
+        <motion.div
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       className="h-[6vh] mt-6 w-[8vw] bg-[#E88D67] rounded-2xl flex items-center justify-center cursor-pointer"
     >
-      <h1 className="text-lg text-white font-['Radley']">Soon..</h1>
+      <h1 
+     
+      className="text-lg text-white font-['Radley']">Click here</h1>
     </motion.div>
+    
+    </a>
+
   </motion.div>
 
  <motion.div
@@ -480,7 +544,7 @@ const Hero = () => {
     <motion.div
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="h-[6vh] w-[8vw] bg-black mt-4 rounded-2xl flex items-center justify-center cursor-pointer shadow-md"
+      className="h-[6vh] w-[8vw] bg-[#005C78]   mt-4 rounded-2xl flex items-center justify-center cursor-pointer shadow-md"
     >
       <h1 className="text-lg text-white font-['Radley']">Click here</h1>
     </motion.div>

@@ -12,9 +12,13 @@ import phone2 from './assets/icons/Call.svg'
 import LocomotiveScroll from 'locomotive-scroll';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [PhoneNumber, setPhoneNumber] = useState('');
+  const [loading, setLoading] = useState(false);
   const form = useRef();
 
   const handleChange = (value) => {
@@ -23,34 +27,62 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = {
-      user_name: form.current.user_name.value,
-      user_email: form.current.user_email.value,
-      user_phone: PhoneNumber,
-      message: form.current.message.value,
-    };
-    console.log("Form Submitted:", formData);
-    // You can handle sending this formData via an API or service like EmailJS
+    setLoading(true);
+    
+    // EmailJS credentials
+    const serviceId = 'service_jmb09ry'; // EmailJS service ID
+    const templateId = 'template_13dwfrb'; // EmailJS template ID
+    const publicKey = 'p66jkoEcTjo8MqeFm'; // EmailJS public key
+    
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        toast.success('Message sent successfully!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        // Reset form
+        form.current.reset();
+        setPhoneNumber('');
+        setLoading(false);
+      }, (error) => {
+        console.error('Failed to send email:', error.text);
+        toast.error('Failed to send message. Please try again.', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        setLoading(false);
+      });
   };
 
   return (
     <div>
+      <ToastContainer />
       <div id="contact" className="hidden md:block w-full min-h-screen bg-black text-white px-20 py-16">
         <h1 className="text-9xl font-['Quick_Peachy'] text-[#E88D67] text-center mb-8 mt-[-8vh] z-20">CONTACT US</h1>
         <div className="flex justify-between">
           <div className="w-1/2 pr-12">
             <h2 className="text-3xl  font-['Quick_Peachy'] mb-4">Get in touch with us</h2>
-            <p className="font-['Radley'] text-lg text-[#E88D67] ">
+            <h1 className='text-[2.5vh] mt-[1vh] font-["Radley"]  tracking-normal leading-7 text-[#E88D67] '>
+
               Whether you're looking for collaboration or just want to say hello — we’d love to hear from you!
-            </p>
+            </h1>
             <div className="mt-8">
-              <h3 className="text-2xl font-['Radley'] mb-2">Socials</h3>
+              <h3 className="text-3xl  font-['Quick_Peachy'] mb-4">Socials</h3>
               <div className="flex space-x-4">
                 <a href="https://discordapp.com/users/692750614379233371" target="_blank" rel="noopener noreferrer">
-                  <img src={discord || "/placeholder.svg"} alt="Discord" className="h-8 w-8" />
+                  <img src={discord || "/placeholder.svg"} alt="Discord" className="h-8 w-10" />
                 </a>
                 <a href="https://www.instagram.com/ani_nation24/" target="_blank" rel="noopener noreferrer">
-                  <img src={insta || "/placeholder.svg"} alt="Instagram" className="h-8 w-8" />
+                  <img src={insta || "/placeholder.svg"} alt="Instagram" className="h-8 w-9" />
                 </a>
                 <a href="https://www.linkedin.com/in/61b9a0221/" target="_blank" rel="noopener noreferrer">
                   <img src={link || "/placeholder.svg"} alt="LinkedIn" className="h-8 w-8" />
@@ -101,8 +133,12 @@ const Contact = () => {
               placeholder="Message..."
               required
             ></textarea>
-            <button type="submit" className="bg-[#E88D67] text-white py-3 px-6 rounded-full font-['Radley'] text-xl">
-              Submit
+            <button 
+              type="submit" 
+              className="bg-[#E88D67] text-white py-3 px-6 rounded-full font-['Radley'] text-xl"
+              disabled={loading}
+            >
+              {loading ? 'Sending...' : 'Submit'}
             </button>
           </form>
         </div>
@@ -198,8 +234,12 @@ const Contact = () => {
 
             {/* Submit Button */}
             <div className="pt-4 flex justify-center">
-              <button type="submit" className="bg-[#E88D67] text-white font-['Radley'] text-xl py-2 px-8 rounded-full">
-                Submit
+              <button 
+                type="submit" 
+                className="bg-[#E88D67] text-white font-['Radley'] text-xl py-2 px-8 rounded-full"
+                disabled={loading}
+              >
+                {loading ? 'Sending...' : 'Submit'}
               </button>
             </div>
           </form>

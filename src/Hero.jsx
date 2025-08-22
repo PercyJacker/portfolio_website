@@ -149,7 +149,7 @@ const Hero = () => {
   style={{ x }}
   className="text-[12vh] sm:text-[21vh] absolute text-[#F3F7EC] mt-[33vh] z-10 font-['Quick_Peachy'] overflow-hidden whitespace-nowrap opacity-70"
 >
-  3D MODELING 3D MODELING
+  FULL STACK DEVELPMENT FULL STACK DEVELPMENT
 </motion.h2>
 <motion.h2
               ref={ref}

@@ -115,47 +115,50 @@ const Work = () => {
                 <img src={website || "/placeholder.svg"} alt="Website" className="w-16 h-16 mr-4" />
                 <h3 className="text-2xl text-white font-['Radley']">Want to build your dream website?</h3>
               </div>
-              <motion.button
+              <motion.a
+                href="https://github.com/PercyJacker"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#E88D67] text-white px-6 py-2 font-['Radley']  rounded-full w-full text-center"
+                className="bg-[#E88D67] text-white px-6 py-2 font-['Radley'] rounded-full w-full text-center block"
               >
                 Soon..
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             <motion.div style={{ y: cardsParallax }} className="bg-[#E88D67] p-6 rounded-lg">
-  <div className="flex items-center mb-4">
-    <img src={youtube || "/placeholder.svg"} alt="Video" className="w-16 h-16 mr-4" />
-    <h3 className="text-2xl text-white font-['Radley']">Want to make a video for your brand?</h3>
-  </div>
-  <motion.a
-    href="https://ytjobs.co/talent/profile/167383?r=895"
-    target="_blank"
-    rel="noopener noreferrer"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="bg-[#005C78]  text-white px-6 py-2 font-['Radley'] rounded-full w-full text-center block text-lg"
-  >
-    Click here
-  </motion.a>
-</motion.div>
+              <div className="flex items-center mb-4">
+                <img src={youtube || "/placeholder.svg"} alt="Video" className="w-16 h-16 mr-4" />
+                <h3 className="text-2xl text-white font-['Radley']">Want to make a video for your brand?</h3>
+              </div>
+              <motion.a
+                href="https://ytjobs.co/talent/profile/167383?r=895"
+                target="_blank" 
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#005C78] text-white px-6 py-2 font-['Radley'] rounded-full w-full text-center block text-lg"
+              >
+                Click here
+              </motion.a>
+            </motion.div>
 
-            <motion.div
-              style={{ y: cardsParallax }}
-              className="bg-gradient-to-br from-[#1A1A1A] to-[#3A3A3A] p-6 rounded-lg"
-            >
+            <motion.div style={{ y: cardsParallax }} className="bg-gradient-to-br from-[#1A1A1A] to-[#3A3A3A] p-6 rounded-lg">
               <div className="flex items-center mb-4">
                 <img src={model || "/placeholder.svg"} alt="3D Model" className="w-16 h-16 mr-4" />
                 <h3 className="text-2xl text-white font-['Radley']">Want a 3D model for yourself?</h3>
               </div>
-              <motion.button
+              <motion.a
+                href="https://example.com/3d-models"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#E88D67] text-white px-6 py-2  font-['Radley'] rounded-full w-full text-center"
+                className="bg-[#E88D67] text-white px-6 py-2 font-['Radley'] rounded-full w-full text-center block"
               >
                 Soon..
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
         </div>
