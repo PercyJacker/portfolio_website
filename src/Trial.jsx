@@ -273,7 +273,7 @@ reducing downtime by 25% through scalable server and pipeline solutions.
                   <img className="h-[5vh] ml-4 mt-5" src={DaVinci || "/placeholder.svg"} alt="" />
                 </div>
               </div>
-              <div className="h-[20vh] w-[23vw] absolute ml-[25vw] mt-[-22vh] p-4">
+              <div className="h-[20vh] w-[23vw] absolute ml-[23vw] mt-[-22vh] p-4">
                 <h1 className="text-[4vh] font-['Quick_Peachy'] mb-2">Coding Skills</h1>
                 <div className="flex flex-wrap">
                   <div className="w-1/2">
