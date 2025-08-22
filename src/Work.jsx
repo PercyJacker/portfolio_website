@@ -134,7 +134,7 @@ const Work = () => {
               </div>
               <motion.a
                 href="https://ytjobs.co/talent/profile/167383?r=895"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
